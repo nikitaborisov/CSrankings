@@ -29,7 +29,7 @@ def pagecount(input):
     start = 0
     end = 0
     count = 0
-    
+
     if (not (pageCounterMatcher1 is None)):
         start = int(pageCounterMatcher1.group(1))
         end   = int(pageCounterMatcher1.group(2))
@@ -41,7 +41,7 @@ def pagecount(input):
             count = end-start+1
     return count
 
-    
+
 areadict = {
     'proglang' : ['POPL', 'PLDI', 'OOPSLA'],
     'highperf' : ['SC', 'PPOPP'],
@@ -51,7 +51,7 @@ areadict = {
     'arch' : ['ISCA', 'MICRO', 'ASPLOS'],
     'theory' : ['STOC', 'FOCS','SODA'],
     'networks' : ['SIGCOMM', 'INFOCOM', 'NSDI'],
-    'security' : ['IEEE Symposium on Security and Privacy', 'ACM Conference on Computer and Communications Security', 'USENIX Security Symposium'],
+    'security' : ['IEEE Symposium on Security and Privacy', 'ACM Conference on Computer and Communications Security', 'USENIX Security Symposium', 'USENIX Security'],
     'mlmining' : ['NIPS', 'ICML','KDD'],
     'ai' : ['AAAI', 'IJCAI'],
     'database' : ['PODS', 'VLDB', 'PVLDB', 'SIGMOD Conference'],
@@ -80,7 +80,7 @@ arealist = areadict.keys();
 startyear = 1980
 endyear   = 2016
 
-   
+
 
 def csv2dict_str_str(fname):
     with open(fname, mode='r') as infile:
@@ -91,4 +91,4 @@ def csv2dict_str_str(fname):
     return d
 
 def sortdictionary(d):
-    return sorted(d.iteritems(), key=operator.itemgetter(1), reverse = True)    
+    return sorted(d.iteritems(), key=operator.itemgetter(1), reverse = True)
